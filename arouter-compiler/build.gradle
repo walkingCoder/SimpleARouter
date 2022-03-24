@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+    id 'kotlin'
+    id 'kotlin-kapt'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation project(path: ':arouter-annotaion')
+
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+    implementation 'com.google.auto.service:auto-service:1.0-rc6'
+    kapt 'com.google.auto.service:auto-service:1.0-rc6'
+
+    implementation 'com.squareup:javapoet:1.8.0'
+//
+    implementation 'org.apache.commons:commons-lang3:3.5'
+    implementation 'org.apache.commons:commons-collections4:4.1'
+
+    implementation 'com.alibaba:fastjson:1.2.69'
+}
